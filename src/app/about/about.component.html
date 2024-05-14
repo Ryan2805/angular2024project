@@ -1,0 +1,49 @@
+
+<style>
+    .aboutimages {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .row {
+      margin-bottom: 20px; 
+    }
+
+    .col-md-5 {
+      text-align: center; 
+      border-top: 1px solid #ccc; 
+    }
+
+    .col-md-5:not(:last-child) {
+      border-right: 1px solid transparent; 
+    }
+
+    h2, p {
+      font-size: 18px; 
+    }
+  </style>
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5 border-right border-bottom">
+        <img src="../../assets/aboutimg1.jpg" alt="Image 1" class="aboutimages">
+      </div>
+      <div class="col-md-5 border-bottom">
+        <h2>About the Project</h2>
+        <p>This site is using Angular and ExpressJS to utilize a NASA API that displays different mars rover images based on different parameters such as date and camera</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-5 border-right">
+        <h2>Related Links</h2>
+        <p>This is a school project, some of the links used for the API can be found <a href="https://api.nasa.gov/" target="_blank">here</a>.</p>
+      </div>
+      <div class="col-md-5">
+        <img src="../../assets/aboutimg2.jpg" alt="Image 4" class="aboutimages">
+      </div>
+    </div>
+  </div>

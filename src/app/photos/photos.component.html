@@ -1,0 +1,12 @@
+<div *ngIf="photos && photos.length > 0">
+    <h2>{{ rover }} Photos</h2>
+    <div class="photo-grid">
+      <div *ngFor="let photo of photos" class="photo-container">
+        <img [src]="photo.img_src" alt="Mars Rover Photo" class="photo">
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="!photos || photos.length === 0">
+    <p>No photos available for {{ rover }}</p>
+  </div>

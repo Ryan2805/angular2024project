@@ -1,0 +1,36 @@
+<div class="form-container">
+    <div class="dropdown-container">
+        <select [(ngModel)]="selectedRover" name="rover" class="custom-dropdown">
+            <ng-container *ngFor="let rover of rovers">
+                <option [value]="rover">{{ rover }}</option>
+              </ng-container>
+          </select>
+    </div>
+    
+    <div class="input-fields-container">
+      <div class="input-row">
+        <label for="sol">Sol:</label>
+        <input type="number" id="sol" name="sol" [(ngModel)]="sol" placeholder="Enter sol" class="input-field">
+      </div>
+  
+      <div class="input-row">
+        <label for="camera">Camera:</label>
+        <select [(ngModel)]="camera" name="camera" class="input-field">
+          <option *ngFor="let cam of cameras" [value]="cam">{{ cam }}</option>
+        </select>
+      </div>
+  
+      <div class="input-row">
+        <label for="page">Page:</label>
+        <input type="number" id="page" name="page" [(ngModel)]="page" placeholder="Enter page" class="input-field">
+      </div>
+    </div>
+    
+    <button type="button" (click)="onSubmit()" class="submit-button">Submit</button>
+
+    <!-- Display fetched images -->
+
+      <div *ngIf="images$">
+        <app-photos [photos]="photos" [rover]="selectedRover"></app-photos>
+    </div>
+  </div>

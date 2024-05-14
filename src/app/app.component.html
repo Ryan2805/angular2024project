@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <style>
+   
+    .mainh1 {
+        text-align: center;
+        font-size: 3em; 
+        color: #333; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 1s ease; 
+    }
+
+    /*fade in animation*/
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+ 
+    <!-- Main Content -->
+    <main>
+      <app-navbar></app-navbar>
+      
+        
+        <h1 class = mainh1>Mars Rover Images</h1>
+        <p></p>
+        <router-outlet></router-outlet>
+
+       <!-- <app-rover-selector></app-rover-selector>  --> 
+       <app-rover-ui *ngIf="shouldShowRoverComponent()"></app-rover-ui>
+    </main>
+
+    <app-footer></app-footer>
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
