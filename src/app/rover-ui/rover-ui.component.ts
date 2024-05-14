@@ -43,6 +43,6 @@ export class RoverUIComponent {
   }
 
   ngOnInit() {
-    console.log(this.rovers); // Log the rovers array
+    console.log(this.rovers); 
   }
 }
